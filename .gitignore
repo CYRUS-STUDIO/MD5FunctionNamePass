@@ -1,0 +1,4 @@
+.idea
+cmake-build-*-visual-studio
+hello.ll
+hello_opt.ll

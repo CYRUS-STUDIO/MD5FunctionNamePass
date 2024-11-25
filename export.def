@@ -1,0 +1,3 @@
+LIBRARY MD5FunctionNamePass
+EXPORTS
+    llvmGetPassPluginInfo
