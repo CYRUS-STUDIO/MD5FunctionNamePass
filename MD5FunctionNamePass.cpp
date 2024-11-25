@@ -89,3 +89,13 @@ llvm::PassPluginLibraryInfo getPassPluginInfo() {
 extern "C" LLVM_ATTRIBUTE_WEAK ::llvm::PassPluginLibraryInfo llvmGetPassPluginInfo() {
     return getPassPluginInfo();
 }
+
+
+extern "C" __declspec(dllexport) void __stdcall clangAddPass(
+        FunctionPassManager &FPM) {
+
+    errs() << "call clangAddPass.\n";
+
+    // 将Pass添加到PassManager
+    FPM.addPass(MD5FunctionNamePass());
+}
